@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="shortcut icon" href="https://banner2.cleanpng.com/20180718/cbh/kisspng-vue-js-javascript-library-angularjs-react-vue-js-5b4ebe1bc45884.1915769815318871318042.jpg">
+    <title>VueApp</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav-bar"></div>
+        <div class="cart">Cart {{ cart.length }}</div>
+        <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+
+    </div>
+    <!--App import-->
+    <script src="./main.js"></script>
+    <!--Component imports-->
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+    <script>
+        const mounted = app.mount('#app')
+    </script>
+</body>
+
+</html>
